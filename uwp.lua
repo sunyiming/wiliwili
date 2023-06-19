@@ -53,7 +53,7 @@ function main(target)
 ]], context))
 
     local vs = find_vstudio()["2022"]["vcvarsall"]["x86"]
-    local windowsSdkBinPath = path.join(vs["WindowsSdkBinPath"], vs["WindowsSDKVersion"], "x86")
+    local windowsSdkBinPath = path.join(vs["WindowsSdkBinPath"], vs["WindowsSDKVersion"], "arm64")
     local makepri = path.join(windowsSdkBinPath, "makepri.exe")
     local makeappx = path.join(windowsSdkBinPath, "makeappx.exe")
     local signtool = path.join(windowsSdkBinPath, "signtool.exe")
