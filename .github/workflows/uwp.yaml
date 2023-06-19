@@ -56,7 +56,7 @@ jobs:
       - name: Setup Windows 10 SDK
         uses: GuillaumeFalourd/setup-windows10-sdk-action@v1.11
         with:
-          sdk-version: 20348
+          sdk-version: 22621
       - name: Install NSIS
         shell: powershell
         run: |
@@ -79,7 +79,7 @@ jobs:
           VERSION: ${{ needs.version.outputs.VERSION }}
         run: |
           $env:path+=";C:\Users\$($env:username)\xmake"
-          xmake f -c -y --sw=y --winrt=y --window=sdl --driver=d3d11
+          xmake f -c -y --sw=y --winrt=y --window=sdl --driver=d3d11 -a arm64
           xmake build wiliwili
       - uses: actions/upload-artifact@v3
         with:
