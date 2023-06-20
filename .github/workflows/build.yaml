@@ -155,7 +155,7 @@ jobs:
         id: compile
         run: |
           mkdir -p build && pushd build
-          cmake .. -G "MinGW Makefiles" -DPLATFORM_DESKTOP=ON -DWIN32_TERMINAL=OFF -DCMAKE_BUILD_TYPE=Release
+          cmake .. -G "MinGW Makefiles" -DPLATFORM_DESKTOP=ON -DWIN32_TERMINAL=OFF -DCMAKE_BUILD_TYPE=Release -A ARM64
           mingw32-make wiliwili -j4
           strip wiliwili.exe
           mkdir wiliwili && mv wiliwili.exe wiliwili && mv resources wiliwili
