@@ -1,4 +1,5 @@
 add_rules("mode.debug", "mode.release")
+add_rules("os.windows.winrt.aarch64")
 
 
 option("sw")
